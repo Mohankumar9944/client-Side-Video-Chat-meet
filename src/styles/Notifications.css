@@ -1,0 +1,146 @@
+
+.notification-container {
+  background-color: #0d0d0d;
+  color: #ffffff;
+  min-height: 100vh;
+  padding: 2rem 1rem;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.notification-header h1 {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 1.5rem;
+  border-bottom: 2px solid #1a1a1a;
+  padding-bottom: 0.5rem;
+}
+
+.section-title {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  color: #e0e0e0;
+}
+
+.section-title span {
+  background-color: #1a1a1a;
+  padding: 0.25rem 0.75rem;
+  border-radius: 12px;
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+.request-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.request-card {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  background-color: #1a1a1a;
+  border-radius: 0.75rem;
+  padding: 1rem;
+  transition: background 0.2s;
+}
+
+.request-card:hover {
+  background-color: #262626;
+}
+
+.request-avatar img {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #333;
+}
+
+.request-info h3 {
+  margin: 0;
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: #ffffff;
+}
+
+.language-details span {
+  display: block;
+  font-size: 0.875rem;
+  color: #cccccc;
+}
+
+.accept-button {
+  margin-left: auto;
+  background-color: #0f62fe;
+  color: white;
+  padding: 0.5rem 1rem;
+  font-size: 0.875rem;
+  border-radius: 0.5rem;
+  border: none;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.accept-button:hover:not(:disabled) {
+  background-color: #0353e9;
+}
+
+.accept-button:disabled {
+  background-color: #333;
+  cursor: not-allowed;
+}
+
+.accepted-card {
+  background-color: #1e1e1e;
+  color: white;
+  padding: 16px;
+  margin-bottom: 12px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+.accepted-avatar img {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+}
+.accepted-info h3 {
+  margin: 0;
+}
+.accepted-time {
+  color: #aaa;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+.accepted-badge {
+  margin-left: auto;
+  color: #00ff99;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+@media (max-width: 600px) {
+  .request-card {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .request-avatar img {
+    width: 48px;
+    height: 48px;
+  }
+
+  .accept-button {
+    width: 100%;
+    margin-top: 1rem;
+  }
+}

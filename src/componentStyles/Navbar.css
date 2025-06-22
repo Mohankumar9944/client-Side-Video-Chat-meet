@@ -1,0 +1,136 @@
+/* Base Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.navbar-container {
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  position: absolute;
+  right: 0px;
+  top: 0px;
+  flex-wrap: wrap;
+}
+
+.navbar-brand {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 1.25rem;
+}
+
+.navbar-brand a {
+  display: flex;
+  text-decoration: none;
+  color: #fff;
+  gap: 0.5rem;
+  font-weight: 600;
+  transition: color 0.3s;
+}
+
+.navbar-brand a:hover {
+  color: #ccc;
+}
+
+.navbar-right {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.navbar-right button {
+  background-color: transparent;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  padding: 0.5rem;
+  border-radius: 50%;
+  transition: background-color 0.2s;
+}
+
+.navbar-right button:hover {
+  background-color: #1a1a1a;
+}
+
+.profile-wrapper img {
+  margin-top: 15px;
+  width: 23px;
+  height: 23px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  
+  .navbar-container {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.75rem;
+    position: absolute;
+    right: 20px;
+  }
+
+  .navbar-right {
+    width: 100%;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+
+  .navbar-brand {
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  nav {
+    padding: 0.5rem;
+  }
+
+  .navbar-container {
+    flex-direction: column;
+    align-items: stretch;
+    position: absolute;
+    right: 0px;
+  }
+
+  .navbar-right {
+    flex-direction: row;
+    justify-content: space-around;
+  }
+
+  .navbar-right button {
+    padding: 0.4rem;
+  }
+
+  .profile-wrapper img {
+    width: 32px;
+    height: 32px;
+  }
+}
+
+@media (max-width: 300px) {
+  .navbar-brand {
+    font-size: 1rem;
+  }
+
+  .navbar-right {
+    gap: 0.3rem;
+    justify-content: space-between;
+  }
+
+  .navbar-right button,
+  .profile-wrapper img {
+    width: 28px;
+    height: 28px;
+  }
+
+  .navbar-right button svg {
+    width: 20px;
+    height: 20px;
+  }
+}

@@ -1,0 +1,94 @@
+/* Base Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #000;
+  color: #fff;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+/* Layout Wrapper */
+.layout-container {
+  gap: 50px;
+  display: flex;
+  background-color: #000;
+}
+
+/* Sidebar */
+.sidebar-container {
+  width: 250px;
+  background-color: #111;
+  flex-shrink: 0;
+}
+
+/* Main content */
+.main-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  background-color: #000;
+  color: #fff;
+  min-height: 100vh;
+}
+
+/* Navbar */
+.navbar-wrapper {
+  padding: 0.5rem 1rem;
+  position: sticky;
+  top: 0;
+}
+
+/* Page content */
+.main-body {
+  flex: 1;
+  padding: 2rem;
+  background-color: #000;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .layout-container {
+    flex-direction: column;
+  }
+
+  .sidebar-container {
+    width: 100%;
+    order: 2;
+  }
+
+  .main-content {
+    order: 1;
+  }
+
+  .main-body {
+    padding: 1.5rem 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .navbar-wrapper {
+    padding: 0.5rem;
+  }
+
+  .main-body {
+    padding: 1rem 0.75rem;
+  }
+}
+
+@media (max-width: 300px) {
+  .sidebar-container {
+    padding: 0.5rem;
+  }
+
+  .navbar-wrapper {
+    padding: 0.4rem;
+  }
+
+  .main-body {
+    padding: 0.75rem 0.5rem;
+  }
+}
